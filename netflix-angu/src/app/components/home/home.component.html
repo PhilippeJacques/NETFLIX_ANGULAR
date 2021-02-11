@@ -1,0 +1,15 @@
+<h1>Best movie Title</h1>
+
+<section>
+    <h3>Popular movies</h3>
+    <div class="movies">
+        <ul class="movies-container">
+            <li *ngFor="let movie of movies">
+                <a routerLink="movie/{{ movie.id }}">
+                    <img class="movie-img" src="https://image.tmdb.org/t/p/original/{{ movie.backdrop_path }}" alt="">
+                    <span class="movie-title">{{ movie.title }}</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+</section>
