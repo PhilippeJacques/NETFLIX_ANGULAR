@@ -1,4 +1,4 @@
-<div class="header-container">
+<section class="header-container">
     <div class="header-info-container">
         <h1 class="info-title">{{ movie.title }}</h1>
         <div class="info-metadata">
@@ -19,4 +19,15 @@
     <div class="header-img-container" style='background-image: url("https://image.tmdb.org/t/p/original/{{ movie.backdrop_path }}");'>
         <div class="header-img"></div>
     </div>
-</div>
+</section>
+
+<section class="section">
+    <div class="section-header">
+        <h2 class="section-header-text">Recommendations</h2>
+    </div>
+    <div class="link-container">
+        <a class="title-link" *ngFor="let recommendedMovie of recommendations" href="movies/{{ recommendedMovie.id }}" title="{{ recommendedMovie.title }}">
+            <img class="title-link-img" src="https://image.tmdb.org/t/p/w500/{{ recommendedMovie.backdrop_path }}" alt="">
+        </a>
+    </div>
+</section>

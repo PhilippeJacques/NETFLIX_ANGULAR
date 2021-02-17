@@ -1,5 +1,5 @@
 export interface TvShow {
-    backdrop_path: string;
+    backdrop_path: string | null;
     created_by?: {
         id: number;
         credit_id: string;
@@ -27,7 +27,7 @@ export interface TvShow {
         overview: string;
         production_code: string;
         season_number: number;
-        still_path: string;
+        still_path: string | null;
         vote_average: number;
         vote_count: number;
     };
@@ -43,11 +43,11 @@ export interface TvShow {
         still_path: string | null;
         vote_average: number;
         vote_count: number;
-    };
+    } | null;
     networks?: {
         name: string;
         id: number;
-        logo_path: string;
+        logo_path: string | null;
         origin_country: string;
     }[];
     number_of_episodes?: number;
@@ -57,10 +57,10 @@ export interface TvShow {
     original_name: string;
     overview: string;
     popularity: number;
-    poster_path: string;
+    poster_path: string | null;
     production_companies?: {
         id: number;
-        logo_path: string;
+        logo_path: string | null;
         name: string;
         origin_country: string;
     }[];

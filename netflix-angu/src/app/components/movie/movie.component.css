@@ -73,3 +73,50 @@
     background: linear-gradient(0.25turn, #181818, #181818af, #18181800),
     linear-gradient(#181818, #18181860, #18181800, #18181860, #181818);
 }
+
+
+
+.section {
+    padding: 0 64px;
+}
+
+.section > * {
+    padding-bottom: 20px;
+}
+
+.section-header>h2 {
+    display: inline-block;
+}
+
+.section-header-text {
+    font-size: 30px;
+    line-height: 34px;
+    font-weight: 400;
+    color: #fff;
+}
+
+.section-header .section-subheader-text {
+    color: #a3a3a3;
+    white-space: nowrap;
+}
+
+.section-header>:not(:first-child) {
+    border-left: 1px solid #a3a3a3;
+    margin-left: 9px;
+    padding-left: 15px;
+}
+
+
+.link-container {
+    display: grid;
+    grid-template-columns: 33.333% 33.333% 33.333%;
+}
+
+.title-link {
+    max-width: 100%;
+    margin: 6px;
+}
+
+.title-link-img {
+    width: 100%;
+}

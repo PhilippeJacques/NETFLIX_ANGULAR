@@ -14,6 +14,7 @@ export class MovieComponent implements OnInit {
 
   movie!: Movie;
   credits!: Credits;
+  recommendations: Movie[] = [];
 
   constructor(
     private route: ActivatedRoute, 
@@ -26,6 +27,7 @@ export class MovieComponent implements OnInit {
     if (id != null) {
       this.theMovieDbService.getMovie(id).subscribe(movie => this.movie = movie);
       this.theMovieDbService.getMovieCredits(id).subscribe(credits => this.credits = credits);
+      this.theMovieDbService.getMoviesRecommendations(id).subscribe(recommendations => this.recommendations = recommendations.results);
     }
   }
 }
