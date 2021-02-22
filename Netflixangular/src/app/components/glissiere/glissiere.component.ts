@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Films } from '../../models/films';
 
 @Component({
   selector: 'app-glissiere',
@@ -7,7 +8,7 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class GlissiereComponent implements OnInit {
   @Input() sliderConfig;
-  @Input() movies;
+  @Input() movies: Films;
   @Input() title: string;
 
   constructor() {}
