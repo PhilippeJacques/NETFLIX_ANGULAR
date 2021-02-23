@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { GlissiereComponent } from './components/glissiere/glissiere.component';
 import { SlickCarouselModule } from 'ngx-slick-carousel';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [AppComponent, GlissiereComponent],
@@ -17,6 +18,7 @@ import { SlickCarouselModule } from 'ngx-slick-carousel';
     MatIconModule,
     MatBadgeModule,
     SlickCarouselModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

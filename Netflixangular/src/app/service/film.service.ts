@@ -19,7 +19,7 @@ const enum endpoint {
 })
 export class FilmService {
   private URL = 'https://api.themoviedb.org/3';
-  // tslint:disable-next-line:variable-name
+
   private api_key = environment.api;
 
   constructor(private http: HttpClient) {}
