@@ -11,7 +11,6 @@
       }"
     >
       <h2>{{ trending?.results[0].title }}</h2>
-      <!-- <h2>{{ trending?.results[0].title }}</h2>-->
       <div class="header__buttons">
         <button class="play-button">
           <mat-icon>arrow_right</mat-icon>
@@ -20,24 +19,29 @@
 
         <button class="more-button">
           <mat-icon>info</mat-icon>
-          <span>More Info</span>
+          <span>Plus D'infos</span>
         </button>
       </div>
     </div>
-    <!--Fin de la bannière-->
+    <!--BANNER ENDS HERE-->
 
-    <!--corps-->
-    <div class="header__main" id="stickyHeader" [class.sticky]="sticky">
+    <!--MAIN AREA-->
+    <div
+      class="header__main"
+      id="stickyHeader"
+      [class.sticky]="sticky"
+      #stickHeader
+    >
       <div class="header__left">
         <a routerLink="/">
           <img src="assets/netflix.png" alt="logo" />
         </a>
         <ul>
           <li class="active"><a href="#">Accueil</a></li>
-          <li><a href="#">show televisé</a></li>
+          <li><a href="#">Show Télevisé</a></li>
           <li><a href="#">Films</a></li>
-          <li><a href="#">Récent</a></li>
-          <li><a href="#">Ma liste</a></li>
+          <li><a href="#">Récents</a></li>
+          <li><a href="#">Ma Liste</a></li>
         </ul>
       </div>
 
@@ -62,7 +66,7 @@
         </ul>
       </div>
     </div>
-    <!--Fin de l'en tete-->
+    <!--HEADER MAIN ENDS HERE-->
   </div>
 
   <div class="body" style="margin-top: 30rem">
