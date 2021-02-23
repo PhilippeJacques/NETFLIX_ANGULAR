@@ -22,54 +22,52 @@ export class FilmService {
   // tslint:disable-next-line:variable-name
   private api_key = environment.api;
 
-
   constructor(private http: HttpClient) {}
-}
+  getLatestMovie(): Observable<Films> {
+    return this.http.get<Films>(`${this.URL}${endpoint.latest}`, {
+      params: {
+        api_key: this.api_key,
+      },
+    });
+  }
 
-getLatestMovie(): Observable<Movies> {
-  return this.http.get<Movies>(`${this.URL}${endpoint.latest}`, {
-    params: {
-      api_key: this.api_key
-    }
-  });
-}
+  getNowPlaying(): Observable<Films> {
+    return this.http.get<Films>(`${this.URL}${endpoint.now_playing}`, {
+      params: {
+        api_key: this.api_key,
+      },
+    });
+  }
 
-getNowPlaying(): Observable<Movies> {
-  return this.http.get<Movies>(`${this.URL}${endpoint.now_playing}`, {
-    params: {
-      api_key: this.api_key
-    }
-  });
-}
+  getOriginals(): Observable<Films> {
+    return this.http.get<Films>(`${this.URL}${endpoint.originals}`, {
+      params: {
+        api_key: this.api_key,
+      },
+    });
+  }
 
-getOriginals(): Observable<Movies> {
-  return this.http.get<Movies>(`${this.URL}${endpoint.originals}`, {
-    params: {
-      api_key: this.api_key
-    }
-  });
-}
+  getPopularMovies(): Observable<Films> {
+    return this.http.get<Films>(`${this.URL}${endpoint.popular}`, {
+      params: {
+        api_key: this.api_key,
+      },
+    });
+  }
 
-getPopularMovies(): Observable<Movies> {
-  return this.http.get<Movies>(`${this.URL}${endpoint.popular}`, {
-    params: {
-      api_key: this.api_key
-    }
-  });
-}
+  getTopRated(): Observable<Films> {
+    return this.http.get<Films>(`${this.URL}${endpoint.top_rated}`, {
+      params: {
+        api_key: this.api_key,
+      },
+    });
+  }
 
-getTopRated(): Observable<Movies> {
-  return this.http.get<Movies>(`${this.URL}${endpoint.top_rated}`, {
-    params: {
-      api_key: this.api_key
-    }
-  });
-}
-
-getTrending(): Observable<Movies> {
-  return this.http.get<Movies>(`${this.URL}${endpoint.trending}`, {
-    params: {
-      api_key: this.api_key
-    }
-  });
+  getTrending(): Observable<Films> {
+    return this.http.get<Films>(`${this.URL}${endpoint.trending}`, {
+      params: {
+        api_key: this.api_key,
+      },
+    });
+  }
 }
