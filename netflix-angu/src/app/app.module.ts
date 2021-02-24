@@ -10,6 +10,9 @@ import { HomeComponent } from './components/home/home.component';
 import { MovieComponent } from './components/movie/movie.component';
 import { TvShowComponent } from './components/tv-show/tv-show.component';
 import { GetStartedComponent } from './components/get-started/get-started.component';
+import { WatchAnywhereComponent } from './watch-anywhere/watch-anywhere.component';
+import { PickPriceComponent } from './pick-price/pick-price.component';
+import { CancelTimeComponent } from './cancel-time/cancel-time.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +22,10 @@ import { GetStartedComponent } from './components/get-started/get-started.compon
     HomeComponent,
     MovieComponent,
     TvShowComponent,
-    GetStartedComponent
+    GetStartedComponent,
+    WatchAnywhereComponent,
+    PickPriceComponent,
+    CancelTimeComponent
   ],
   imports: [
     BrowserModule,
