@@ -13,6 +13,8 @@ import { GetStartedComponent } from './components/get-started/get-started.compon
 import { WatchAnywhereComponent } from './watch-anywhere/watch-anywhere.component';
 import { PickPriceComponent } from './pick-price/pick-price.component';
 import { CancelTimeComponent } from './cancel-time/cancel-time.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatIconModule} from '@angular/material/icon';
 
 @NgModule({
   declarations: [
@@ -31,6 +33,8 @@ import { CancelTimeComponent } from './cancel-time/cancel-time.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    BrowserAnimationsModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]

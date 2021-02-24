@@ -6,6 +6,12 @@
 .navbar {
     display: flex;
     padding: 12px;
+    z-index: 100;
+    top: 0;
+    position: fixed;
+    background-color: var(--background-color);
+    width: 100%;
+    align-items: center;
 }
 
 .navbar-brand {
@@ -25,4 +31,9 @@
 .navbar-get-started {
     align-self: center;
     margin-left: auto;
+    margin-right: auto;
+}
+
+.navbar-right-item {
+    margin-right: 24px;
 }
